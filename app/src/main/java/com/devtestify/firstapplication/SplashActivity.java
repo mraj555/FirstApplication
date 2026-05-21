@@ -1,6 +1,7 @@
 package com.devtestify.firstapplication;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
@@ -8,10 +9,16 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class SplashActivity extends AppCompatActivity {
 
+    MediaPlayer splashSound;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
+
+        splashSound = MediaPlayer.create(SplashActivity.this, R.raw.splash);
+        splashSound.start();
+
         Thread thread = new Thread() {
             @Override
             public void run() {
@@ -35,6 +42,7 @@ public class SplashActivity extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
+        splashSound.release();
         finish();
     }
 }

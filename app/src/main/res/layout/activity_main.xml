@@ -9,30 +9,28 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/welcome_text"
-        android:id="@+id/welcome_text"
+        android:text="Total Counter is : 0"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:id="@+id/counterText"
         />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:autofillHints="name"
-        android:layout_marginTop="20dp"
-        android:hint="@string/enter_your_name"
-        android:id="@+id/editText"
-        android:inputType="text" />
 
     <Button
+        android:text="Add"
         android:layout_marginTop="20dp"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/new_button"
-        android:id="@+id/button"
-        android:textAllCaps="false"
-        android:textColor="@color/white"
-        android:background="@color/design_default_color_primary"
-        />
+        android:id="@+id/addButton"/>
+
+    <Button
+        android:text="Subtract"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/subtractButton"
+    />
+
 </LinearLayout>
 
